@@ -2,6 +2,9 @@ serial:
   port: COM3  # Puerto serie Arduino (ajustar según tu sistema)
   baudrate: 9600
   timeout: 1.0
+  pins:
+    rx: 2  # Pin digital 2 para RX
+    tx: 3  # Pin digital 3 para TX
 
 sensors:
   - name: temperature

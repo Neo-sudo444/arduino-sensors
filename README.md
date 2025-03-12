@@ -1,6 +1,17 @@
 # Arduino Sensor Reader
 
-Este proyecto lee datos de sensores desde Arduino a través del puerto serie y los guarda en un archivo CSV.
+Este proyecto lee datos de sensores desde Arduino a través de comunicación serial por software (pines TX/RX) y los guarda en un archivo CSV.
+
+## Conexiones
+
+### Pines Serial
+- RX: Pin Digital 2
+- TX: Pin Digital 3
+
+### Sensores
+- Temperatura: Pin A0
+- Humedad: Pin A1
+- Luz: Pin A2
 
 ## Requisitos
 
@@ -14,10 +25,14 @@ Este proyecto lee datos de sensores desde Arduino a través del puerto serie y l
 
 1. Ajusta el archivo `config.yaml` según tus necesidades:
    - Modifica el puerto COM según tu sistema
+   - Verifica que los pines RX (2) y TX (3) estén correctamente configurados
    - Ajusta los pines y tipos de sensores
    - Configura el intervalo de lectura
 
-2. Asegúrate que tu Arduino esté enviando los datos en formato CSV por el puerto serie.
+2. Conecta los componentes:
+   - Conecta el pin digital 2 (RX) del Arduino al pin TX del dispositivo emisor
+   - Conecta el pin digital 3 (TX) del Arduino al pin RX del dispositivo receptor
+   - Conecta los sensores a sus pines analógicos correspondientes
 
 ## Uso
 
