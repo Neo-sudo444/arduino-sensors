@@ -1,0 +1,24 @@
+serial:
+  port: COM3  # Puerto serie Arduino (ajustar según tu sistema)
+  baudrate: 9600
+  timeout: 1.0
+
+sensors:
+  - name: temperature
+    type: analog
+    pin: A0
+    units: celsius
+    
+  - name: humidity
+    type: analog
+    pin: A1
+    units: percentage
+    
+  - name: light
+    type: analog
+    pin: A2
+    units: lux
+
+reading:
+  interval: 1.0  # Intervalo de lectura en segundos
+  log_file: sensor_data.csv
